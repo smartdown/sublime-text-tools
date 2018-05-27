@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <base href="${smartdownSite}/lib/">
+
+  <title>${title}</title>
+
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="smartdown.css">
+
+<!--
+  <script>
+    window.godownBase = 'http://127.0.0.1:8484/';
+  </script>
+  <script src="http://127.0.0.1:8484/godown.js"></script>
+-->
+
+  <script>
+    window.godownBase = 'https://rawgit.com/DoctorBud/godown/master/godown/';
+  </script>
+  <script src="https://rawgit.com/DoctorBud/godown/master/godown/godown.js"></script>
+
+  <script src="smartdown.js"></script>
+  <script src="calc_handlers.js"></script>
+
+  ${escapedScripts}
+</head>
+
+<body
+  style="margin:0;padding:0;background:white;">
+
+  <div
+    class="container-fluid"
+    style="margin:0;padding:0;">
+    <div
+      class="smartdown-container"
+      id="smartdown-output">
+    </div>
+  </div>
+
+  <script src="inline_helper.js"></script>
+  <script>
+    smartdown.setLinkRules([
+      ${mediaLinkRules}
+    ]);
+  </script>
+</body>
+</html>
